@@ -5,7 +5,8 @@
   "scripts": {
     "production": "webpack --mode production --config webpack.config.prod.js",
     "build": "webpack --mode development --config webpack.config.dev.js",
-    "start": "webpack serve --config webpack.config.dev.js"
+    "start": "webpack serve --config webpack.config.dev.js",
+    "publish": "npm run build; git add .; git commit -m 'Update dist'; git push -u origin main; git subtree push --prefix dist origin gh-pages"
   },
   "author": "",
   "license": "ISC",
@@ -28,5 +29,6 @@
     "@pixi/sprite": "^6.0.2",
     "@pixi/text": "^6.0.2",
     "@pixi/ticker": "^6.0.2"
-  }
+  },
+  "homepage": "https://piercestar.github.io/pixijs-playground/"
 }
